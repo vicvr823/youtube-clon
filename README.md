@@ -1,7 +1,7 @@
 # Clon de YouTube
  Clon de youtube hecho con html y css desarrollado como parte del taller en la plataforma EDteam
 
-## Pricipal
+## Principal
 ![](https://i.ibb.co/0CQ5CjW/youtube1.png)
 
 ## Visualizacion de video
