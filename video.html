@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons/style.css">
+</head>
+
+<body class="video-page scroll">
+
+    <!-- Navegacion superior -->
+
+    <header class="main-header">
+        <div class="start place-center">
+            <button class="action-button icon-menu"></button>
+            <a href="/"><img class="logo" src="img/logo.svg" alt="Logo de Youtube"></a>
+        </div>
+
+        <!-- Middle -->
+        <div class="middle place-center">
+
+            <form class="form-search place-center" action="#">
+                <input type="search" placeholder="Buscar" class="input">
+                <button data-tooltip="Buscar" class="submit icon-search"></button>
+            </form>
+
+            <button data-tooltip="Haz una busqueda por voz" class="action-button icon-microphone"></button>
+        </div>
+        
+        <!-- End -->
+        <div class="place-center buttons-container">
+
+            <button data-tooltip="Crear" class="action-button icon-camera"></button>
+            <button data-tooltip="Aplicaciones de Youtube" class="action-button icon-grid"></button>
+            <button data-tooltip="Notificaciones" class="action-button icon-bell"></button>
+
+            <div class="user">
+                <div class="user-avatar">
+                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe67svmh9TCZKJl63N51pJzLGnBzJoqBSuZA&usqp=CAU" alt="Foto del usuario">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="video-page-grid">
+        <main class="video-column">
+            <section class="video-player">
+                <iframe class="video" src="https://www.youtube.com/embed/u1mheLldTj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h1 class="title">Crear Tablespace desde psql shell para PostgreSQL en Windows 10</h1>
+                <div class="actions">
+                    <p class="video-information">
+                        <span class="views">100.000 Visualizaciones</span>
+                        <span>25 mar 2021</span>
+                    </p>
+
+                    <div class="buttons-container">
+                        <div class="buttons-container likes">
+                            <button data-tooltip="Me gusta este video" class="action-button has-text">
+                                <span class="icon icon-like-video"></span>
+                                <span>18.000</span>
+                            </button>
+                            <button data-tooltip="No me gusta este video" class="action-button has-text">
+                                <span class="icon icon-dislike-video"></span>
+                                <span>999</span>
+                            </button>
+                        </div>
+                        
+                        <button data-tooltip="Compartir" class="action-button has-text">
+                            <span class="icon icon-share"></span>
+                            <span>Compartir</span>
+                        </button>
+                        <button data-tooltip="Guardar" class="action-button has-text">
+                            <span class="icon icon-add-list"></span>
+                            <span>Guardar</span>
+                        </button>
+                        <button class="action-button icon icon-horizontal-dots"></button>
+                    </div>
+                </div>
+
+                <hr class="border">
+            </section>
+
+            <section class="video-player-information flex">
+                <div class="user-avatar">
+                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe67svmh9TCZKJl63N51pJzLGnBzJoqBSuZA&usqp=CAU" alt="Foto del usuario">
+                </div>
+                <div class="content">
+                    <header class="header flex">
+                        <div>
+                            <a href="#" class="channel-name" data-tooltip="Tera">Tera</a>
+                            <p class="subs-count">500.000 suscriptores</p>
+                        </div>
+                        <button class="button">Suscribirme</button>
+                    </header>
+                    <p class="caption rows-text-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus possimus hic velit alias eaque sint harum repudiandae commodi, sed ex. Temporibus in libero aut dicta? Ipsam fuga distinctio totam inventore?
+                    </p>
+                    <button class="action-button has-text">
+                        <span>Mostrar más</span>
+                    </button>
+                </div>
+            </section>
+
+            <hr class="big">
+
+            <section class="comments-section">
+                <header class="comments-information buttons-container">
+                    <p>150 Comentarios</p>
+                    <button class="action-button has-text">
+                        <span class="icon icon-filter"></span>
+                        <span>Ordenar por</span>
+                    </button>
+                </header>
+                <div class="comment-form flex">
+                    <div class="user-avatar">
+                        <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe67svmh9TCZKJl63N51pJzLGnBzJoqBSuZA&usqp=CAU" alt="Foto del usuario">
+                    </div>
+                    <div class="form">
+                        <div class="input" contenteditable></div>
+                        <div class="buttons-container">
+                            <button class="button link">Cancelar</button>
+                            <button class="button" disabled>Comentar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-grid" id="comments-grid">
+    <!-- Aqui se renderiza los comentarios -->
+                    <!-- <article class="comment flex">
+                        <div class="user-avatar">
+                            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe67svmh9TCZKJl63N51pJzLGnBzJoqBSuZA&usqp=CAU" alt="Foto del usuario">
+                        </div>
+                        <div class="content">
+                            <header class="header">
+                                <a href="#" class="name"><b>Tera</b></a>
+                                <time class="time">Hace una semana</time>
+                            </header>
+                            <p class="text rows-text-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nisi facere dolorem doloremque, nobis asperiores exercitationem quibusdam cum nemo debitis minus, voluptate consequuntur! Nisi ad voluptas reiciendis ratione est hic.</p>
+
+                            <footer class="buttons-container">
+                                <button class="action-button has-text" data-tooltip="Me gusta">
+                                    <span class="icon icon-like-video"></span>
+                                    <span class="text">10</span>
+                                </button>
+                                <button class="action-button has-text" data-tooltip="No me gusta">
+                                    <span class="icon icon-dislike-video"></span>
+                                </button>
+                                <button class="action-button has-text">
+                                    <span class="text">Responder</span>
+                                </button>
+                            </footer>
+                        </div>
+                    </article> -->
+                </div>
+            </section>
+
+        </main>
+        <aside class="cards-sidebar" id="card-grid">
+            <!-- <article class="card-video in-sidebar">
+                <a class="cover" href="#"><img class="image" src="https://picsum.photos/200/300" alt="Poster del video">
+                    <time class="time">5:50</time>
+                </a>
+                <div class="content">
+                    <h3 class="title rows-text-2">
+                        <a href="video.html">Este es el titulo de mi video</a>
+                    </h3>
+                    <a href="#">Tera</a>
+                    <p class="video-information">
+                        <span class="views">100.000 visualizaciones</span>
+                        <span>Hace 2 semanas</span>
+                    </p>
+                </div>
+            </article> -->
+
+    <!-- Aqui se renderizan los videos recomendados -->
+            
+        </aside>
+    </div>
+    <script src="js/scripts/comment.js" type="module"></script>
+    <script src="js/scripts/cards.js" type="module"></script>
+</body>
+</html>
